@@ -1,9 +1,8 @@
 import rss from "@astrojs/rss";
-import { getCollection, type CollectionEntry } from "astro:content";
 import siteData from "@config/siteData.json";
-
 // utils
 import { getAllPosts } from "@js/blogUtils";
+import { type CollectionEntry, getCollection } from "astro:content";
 
 // this is needed for getAuthorName() and getAuthorEmail() below
 const authors: CollectionEntry<"authors">[] = await getCollection("authors");

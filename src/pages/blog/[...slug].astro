@@ -1,12 +1,10 @@
 ---
-import { render } from "astro:content";
-import { type InferGetStaticPropsType } from "astro";
-
-// layout
-import BlogLayout from "@layouts/BlogLayoutCentered.astro";
-
 // utils
 import { getAllPosts } from "@js/blogUtils";
+// layout
+import BlogLayout from "@layouts/BlogLayoutCentered.astro";
+import { type InferGetStaticPropsType } from "astro";
+import { render } from "astro:content";
 
 export async function getStaticPaths() {
 	const posts = await getAllPosts();

@@ -9,10 +9,6 @@ node_modules
 .netlify
 netlify 
 
-# Ignore MDX files as Keystatic expects a specific JSX component structure
-# IF using Keystatic, I recommend uncommenting the below line so you don't accidentally format things incorrectly
-# **/*.mdx
-
 # Ignore tours
 .tours
 
@@ -21,3 +17,11 @@ netlify
 **/.svn
 **/.hg
 **/node_modules
+
+# Lockfiles
+**/package-lock.json
+**/yarn.lock
+**/pnpm-lock.yaml
+
+# Scripts
+scripts/

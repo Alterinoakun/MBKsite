@@ -1,15 +1,12 @@
 ---
-import { type Page } from "astro";
-
-// layout
-import BaseLayout from "@layouts/BaseLayout.astro";
-
+import Pagination from "@components/Pagination/Pagination.astro";
 // components
 import PostCard from "@components/PostCard/PostCard.astro";
-import Pagination from "@components/Pagination/Pagination.astro";
-
 // utils
 import { getAllPosts } from "@js/blogUtils";
+// layout
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { type Page } from "astro";
 
 export async function getStaticPaths({ paginate }) {
 	const posts = await getAllPosts();

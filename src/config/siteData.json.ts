@@ -1,5 +1,5 @@
 export interface SiteDataProps {
-	name: String;
+	name: string;
 	title: string;
 	description: string;
 	useViewTransitions?: boolean; // defaults to false. Set to true to enable some Astro 3.0 view transitions

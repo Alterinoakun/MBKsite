@@ -1,18 +1,13 @@
 ---
-import { type CollectionEntry } from "astro:content";
+import Button from "@components/Button/Button.astro";
+import Category from "@components/Category/Category.astro";
+import { getAllAuthorsData } from "@js/blogUtils";
+import { formatDate } from "@js/textUtils";
 import { Image } from "astro:assets";
+import { type CollectionEntry } from "astro:content";
 import { Icon } from "astro-icon/components";
 
-// main layout
 import BaseLayout from "./BaseLayout.astro";
-
-// components
-import Category from "@components/Category/Category.astro";
-import Button from "@components/Button/Button.astro";
-
-// utils
-import { formatDate } from "@js/textUtils";
-import { getAllAuthorsData } from "@js/blogUtils";
 
 interface Props {
 	post: CollectionEntry<"blog">;
