@@ -1,19 +1,15 @@
 ---
-import { Image } from "astro:assets";
-
-// layout
-import BaseLayout from "@layouts/BaseLayout.astro";
-
+import Button from "@components/Button/Button.astro";
 // components
 import Hero from "@components/Hero/Hero.astro";
-import Button from "@components/Button/Button.astro";
 import PostCard from "@components/PostCard/PostCard.astro";
-
-// utils
-import { getAllPosts, formatPosts } from "@js/blogUtils";
-
 // data
 import siteData from "@config/siteData.json";
+// utils
+import { formatPosts, getAllPosts } from "@js/blogUtils";
+// layout
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
 
 const posts = await getAllPosts();
 const recentPosts = formatPosts(posts, { limit: 3 });

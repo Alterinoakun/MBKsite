@@ -1,14 +1,10 @@
 ---
-// components
-import NavLink from "@components/Nav/NavLink.astro";
-import NavDropdown from "@components/Nav/NavDropdown/NavDropdown.astro";
-import MobileNav from "@components/Nav/MobileNav/MobileNav.astro";
-import SiteLogo from "@components/SiteLogo/SiteLogo.astro";
 import Button from "@components/Button/Button.astro";
-
-// data
+import MobileNav from "@components/Nav/MobileNav/MobileNav.astro";
+import NavDropdown from "@components/Nav/NavDropdown/NavDropdown.astro";
+import NavLink from "@components/Nav/NavLink.astro";
+import SiteLogo from "@components/SiteLogo/SiteLogo.astro";
 import navData from "@config/navData.json";
-// console.log(JSON.stringify(navData, null, 2));
 
 interface Props {
 	rest?: any; // catch-all for any additional parameters, such as "aria-label"

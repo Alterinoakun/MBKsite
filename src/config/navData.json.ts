@@ -1,5 +1,5 @@
 // utils
-import { getAllPosts, countItems, sortByValue } from "@js/blogUtils";
+import { countItems, getAllPosts, sortByValue } from "@js/blogUtils";
 import { humanize } from "@js/textUtils";
 
 // get the categories used in blog posts, to put into navbar

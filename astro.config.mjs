@@ -1,11 +1,10 @@
-import { defineConfig } from "astro/config";
-
-import tailwindcss from "@tailwindcss/vite";
-import icon from "astro-icon"; // https://www.astroicon.dev/guides/upgrade/v1/
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import compress from "@playform/compress";
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "astro/config";
 import AutoImport from "astro-auto-import";
+import icon from "astro-icon"; // https://www.astroicon.dev/guides/upgrade/v1/
 
 // https://astro.build/config
 export default defineConfig({
@@ -48,7 +47,7 @@ export default defineConfig({
 		compress({
 			HTML: true,
 			JavaScript: true,
-			CSS: true,
+			CSS: false,
 			Image: false, // astro:assets handles this. Enabling this can dramatically increase build times
 			SVG: false, // astro-icon handles this
 		}),

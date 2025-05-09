@@ -1,9 +1,8 @@
 ---
-import { type CollectionEntry, getCollection, render } from "astro:content";
-import { type InferGetStaticPropsType } from "astro";
-
 // layout
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { type InferGetStaticPropsType } from "astro";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
 	const otherPages: CollectionEntry<"otherPages">[] = await getCollection(
