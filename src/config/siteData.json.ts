@@ -16,23 +16,23 @@ export interface SiteDataProps {
 
 // Update this file with your site specific information
 const siteData: SiteDataProps = {
-	name: "Blogsmith",
-	// Your website's title and description (meta fields)
-	title: "Blogsmith - a beautiful starter blog template using Astro and Tailwind CSS",
+	name: "MapBisnisKu",
+	// Judul dan deskripsi website Anda (meta fields)
+	title: "MapBisnisKu - Konsultan & Manajemen Profil Bisnis Google",
 	description:
-		"Get your new blog website up and running quickly with our beautiful website theme designed using Astro and Tailwind CSS. Perfect for freelancers, developers, startups, and personal use.",
+		"Layanan pembuatan website dan landing page profesional, manajemen Profil Bisnis Google, dan lainnya. Tingkatkan bisnis Anda secara online bersama MapBisnisKu.",
 	useViewTransitions: true,
-	// Your information!
+	// Informasi bisnis Anda
 	author: {
-		name: "Cosmic Themes",
-		email: "creator@cosmicthemes.com",
-		twitter: "Cosmic_Themes",
+		name: "Tim MapBisnisKu",
+		email: "",
+		twitter: "",
 	},
 
-	// default image for meta tags if the page doesn't have an image already
+	// Gambar default untuk meta tag jika halaman belum memiliki gambar
 	defaultImage: {
 		src: "/images/cosmic-themes-logo.jpg",
-		alt: "Blogsmith logo",
+		alt: "Logo MapBisnisKu",
 	},
 };
 

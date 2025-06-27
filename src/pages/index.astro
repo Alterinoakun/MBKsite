@@ -1,46 +1,65 @@
 ---
-import Button from "@components/Button/Button.astro";
-// components
 import Hero from "@components/Hero/Hero.astro";
-import PostCard from "@components/PostCard/PostCard.astro";
-// data
-import siteData from "@config/siteData.json";
-// utils
-import { formatPosts, getAllPosts } from "@js/blogUtils";
-// layout
+import Seo from "@components/Seo/Seo.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import { Image } from "astro:assets";
-
-const posts = await getAllPosts();
-const recentPosts = formatPosts(posts, { limit: 3 });
+import ContactFormInteractive from "@components/ContactFormInteractive.jsx";
 ---
 
-<BaseLayout title={siteData.title} description={siteData.description}>
-	<Hero />
-	<div class="site-container mt-10">
-		<!-- Recent blogs -->
-		<div class="mx-auto max-w-3xl md:mt-12">
-			<h2 class="h2 text-center">Recent Blog Posts</h2>
-			<hr class="bg-primary-600/50 mx-auto mt-4 max-w-[30%] rounded-full border-none pt-1" />
-			<div class="mt-8 grid gap-4 md:grid-cols-2">
-				{
-					recentPosts.map((post, idx) =>
-						// first post is large post card, don't re-show it here
-						idx === 0 ? (
-							<div class="md:col-span-2">
-								<PostCard post={post} showDescription={true} />
-							</div>
-						) : (
-							<PostCard post={post} showDescription={true} />
-						),
-					)
-				}
-			</div>
-		</div>
+<BaseLayout title="Mapbisnisku - Consulting & Google Business Profile Management" description="Professional website and landing page creation, Google Business Profile management, and more. Boost your business online with Mapbisnisku.">
+  <!-- Hero Section -->
+  <Hero title="Grow Your Business Online with Mapbisnisku" subtitle="Expert Website & Landing Page Creation, Google Business Profile Management, and More" />
 
-		<!-- link to all posts -->
-		<div class="mt-12 flex justify-center">
-			<Button variant="outline" arrow="right" href="/blog/">All Posts</Button>
-		</div>
-	</div>
+  <!-- Services Section -->
+  <section id="services" class="py-16 px-4 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">Our Services</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Website/Landing Page Creation -->
+      <div class="bg-white rounded-lg shadow p-6 border-t-4 border-blue-500">
+        <h3 class="text-xl font-semibold mb-2">Website & Landing Page Creation</h3>
+        <p class="mb-4">Professional, responsive websites and landing pages tailored to your business goals. Boost your online presence and convert more visitors into customers.</p>
+        <ul class="list-disc ml-5 text-gray-700">
+          <li>Custom design & development</li>
+          <li>SEO best practices</li>
+          <li>Fast, secure, and mobile-friendly</li>
+        </ul>
+      </div>
+      <!-- Coming Soon Services -->
+      <div class="bg-gray-50 rounded-lg shadow p-6 border-t-4 border-gray-300 opacity-70">
+        <h3 class="text-xl font-semibold mb-2">Automated Review Response System <span class="text-xs bg-yellow-200 px-2 py-1 rounded">Coming Soon</span></h3>
+        <p>AI-powered system to automatically respond to customer reviews on Google Business Profile.</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg shadow p-6 border-t-4 border-gray-300 opacity-70">
+        <h3 class="text-xl font-semibold mb-2">WhatsApp Chat Integration <span class="text-xs bg-yellow-200 px-2 py-1 rounded">Coming Soon</span></h3>
+        <p>Integrate WhatsApp chat with AI-powered automated replies for instant customer engagement.</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg shadow p-6 border-t-4 border-gray-300 opacity-70">
+        <h3 class="text-xl font-semibold mb-2">Article Creation for Google Business Profile <span class="text-xs bg-yellow-200 px-2 py-1 rounded">Coming Soon</span></h3>
+        <p>Engaging articles for your Google Business Profile to keep your audience informed and boost visibility.</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg shadow p-6 border-t-4 border-gray-300 opacity-70">
+        <h3 class="text-xl font-semibold mb-2">SEO-Optimized Article Creation <span class="text-xs bg-yellow-200 px-2 py-1 rounded">Coming Soon</span></h3>
+        <p>High-quality, SEO-focused articles for your website or landing page to improve search rankings.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 px-4 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">About Mapbisnisku</h2>
+    <p class="text-lg text-gray-700 text-center">Mapbisnisku is dedicated to helping businesses grow online. With expertise in website creation and Google Business Profile management, we empower you to reach more customers and build a strong digital presence.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-4 max-w-2xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">Hubungi Kami</h2>
+    <ContactFormInteractive client:load />
+  </section>
+
+  <!-- SEO Meta Tags -->
+  <Seo title="Mapbisnisku - Consulting & Google Business Profile Management" description="Professional website and landing page creation, Google Business Profile management, and more. Boost your business online with Mapbisnisku." />
+
+  <!--
+    This page uses components from src/components/ and static assets from public/ or src/assets/.
+    All code is commented for clarity and follows the MIT License of the original template.
+  -->
 </BaseLayout>
