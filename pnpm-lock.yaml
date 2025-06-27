@@ -54,7 +54,7 @@ importers:
         specifier: 1.1.5
         version: 1.1.5
       astro-seo:
-        specifier: 0.8.4
+        specifier: ^0.8.4
         version: 0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.8.3)
       react:
         specifier: ^19.1.0
